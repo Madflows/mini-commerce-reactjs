@@ -24,7 +24,8 @@ const Navbar = () => {
     },
   ];
   return (
-    <nav className="px-4 lg:px-0 py-4 flex w-full items-center justify-between">
+    <nav className="bg-yellow-300 fixed top-0 w-full z-20">
+      <div className="px-4 lg:px-0 py-4 max-w-[950px] mx-auto flex w-full items-center text-white justify-between">
       <Link
         to={"/"}
         className="flex items-center justify-center gap-1 text-white bg-slate-800 rounded-sm px-2 py-2 max-w-[100px]"
@@ -42,7 +43,7 @@ const Navbar = () => {
       <div className="flex md:hidden">
         <CgMenuGridO
           onClick={() => setShowMenu(!showMenu)}
-          className="text-3xl text-slate-700"
+          className="text-3xl text-slate-900 cursor-pointer"
         />
         <div
           className={`${
@@ -64,6 +65,7 @@ const Navbar = () => {
           ))}
         </div>
       </div>
+    </div>
     </nav>
   );
 };
