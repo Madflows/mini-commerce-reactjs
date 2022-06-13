@@ -15,7 +15,7 @@ const Store = () => {
       .then((data) => setProducts(data));
   }, []); // Only fetch the store data when the component is mounted
   return (
-    <div className="w-full">
+    <div className="w-full pt-[5rem]">
       <Heading storeName={storeName} />
       {products.length > 0 ? (
         <ProductsSection products={products} />
@@ -37,17 +37,17 @@ export default Store;
 
 const Heading = ({ storeName }) => {
   return (
-    <div className="bg-slate-200 flex items-center justify-center flex-col gap-2 py-4 md:py-8">
+    <div className="bg-slate-200 flex items-center justify-center rounded-md flex-col gap-2 py-4 md:py-8">
       <p className="font-bold text-md">Welcome to</p>
-      <h1 className="text-3xl font-black uppercase">{storeName}</h1>
+      <h1 className="text-xl md:text-3xl font-black uppercase">{storeName}</h1>
     </div>
   );
 };
 
 const ProductsSection = ({ products }) => (
   <div className="px-4 py-12">
-    <h2 className="text-2xl font-bold">Featured Products</h2>
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2">
+    <h2 className="text-2xl font-bold py-4 text-slate-800 uppercase">Featured Products</h2>
+    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2">
       {products.map((product, index) => (
         <Product key={index} product={product} />
       ))}
