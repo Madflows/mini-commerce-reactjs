@@ -26,19 +26,26 @@ Well, Here I am, working on the project
 [![Netlify Status](https://api.netlify.com/api/v1/badges/ddf4fdf8-4b98-4ae8-8199-73a906184fac/deploy-status)](https://app.netlify.com/sites/bejewelled-brioche-1c842e/deploys)
 
 ## Contributors
-### Feel free to contribute :)
+<b>
+  <i>Feel free to contribute :)</i>
+</b>
 
-<div style="display:flex;">
-<a href="https://github.com/thefolarin">
-  <img src="https://github.com/thefolarin.png?size=50" width="50px">
-  <p>thefolarin</p>
-</a>
-  
-  <a href="https://github.com/madflows" float="right">
-  <img src="https://github.com/madflows.png?size=50" width="50px">
-  <p>madflows</p>
-</a>
-</div>
+<table>
+  <tr>
+    <td>
+      <a aria-label="Madflows" href="https://github.com/madflows" target="_blank">
+        <img alt="" src="https://github.com/madflows.png?size=50" width="50px"/>
+        <p>Madflows</p>
+      </a>
+    </td>
+    <td>
+      <a aria-label="Folarin Lawal" href="https://madflows.dev" target="_blank">
+        <img alt="" src="https://github.com/thefolarin.png?size=50" width="50px"/>
+        <p>thefolarin</p>
+      </a>
+    </td>
+  </tr>
+</table>
 
 <!-- <div style="display: flex; gap: 1rem; align-items: center; justify-content: center;">
 <a href="https://github.com/thefolarin" style="color: #881337; text-decoration: none;">
