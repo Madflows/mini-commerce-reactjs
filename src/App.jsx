@@ -7,7 +7,7 @@ const App = () => {
   return (
     <div>
       <Navbar />
-      <div className="w-full max-w-[950px] lg:max-w-[1020px] mx-auto">
+      <div className="w-full max-w-[950px] pt-[5rem] lg:max-w-[1020px] mx-auto">
         <main className="px-4 md:px-0 py-5">
           <Routes>
             <Route path="/" element={<Navigate to="/store" />} />

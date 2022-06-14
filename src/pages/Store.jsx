@@ -15,7 +15,7 @@ const Store = () => {
       .then((data) => setProducts(data));
   }, []); // Only fetch the store data when the component is mounted
   return (
-    <div className="w-full pt-[5rem]">
+    <div className="w-full">
       <Heading storeName={storeName} />
       {products.length > 0 ? (
         <ProductsSection products={products} />
