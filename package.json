@@ -11,6 +11,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "framer-motion": "^6.3.11",
     "gh-pages": "^4.0.0",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
@@ -18,7 +19,8 @@
     "react-icons": "^4.4.0",
     "react-router-dom": "^6.3.0",
     "react-use-cart": "^1.13.0",
-    "rellax": "^1.12.1"
+    "rellax": "^1.12.1",
+    "scrollreveal": "^4.0.9"
   },
   "devDependencies": {
     "@types/react": "^18.0.0",

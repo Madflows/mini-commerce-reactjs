@@ -43,7 +43,7 @@ const AllItems = () => {
             className="flex flex-col md:flex-row items-center justify-between px-4 py-4 bg-slate-200 rounded-sm"
           >
             <div className="flex justify-center gap-3 items-center">
-              <img src={item.image} className="w-10 h-10" />
+              <img src={item.images[1]} className="w-10 h-10" />
               <p className="text-md font-bold">{item.title}</p>
             </div>
             <div className="flex items-center justify-center gap-6">

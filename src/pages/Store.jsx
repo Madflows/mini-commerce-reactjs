@@ -1,16 +1,14 @@
 import React, { useState, useEffect, useContext } from "react";
-import { BsBookmarkStarFill } from "react-icons/bs";
 import { useCart } from "react-use-cart";
 import toast from "react-hot-toast"
-import Rellax from "rellax";
+import { motion } from "framer-motion";
 
 const Store = () => {
   const [storeName, setStoreName] = useState("Baldr's MarketPlace"); // setStoreName is a function
   document.title = `${storeName}`; // Set the title of the page to the store name
   const [products, setProducts] = useState([]);
   useEffect(() => {
-    var rellax = new Rellax('.relax')
-    fetch("https://fakestoreapi.com/products/category/electronics?limit=9")
+    fetch("https://api.escuelajs.co/api/v1/products?offset=0&limit=15")
       .then((res) => res.json())
       .then((data) => setProducts(data))
       .catch((err) => console.log(err));
@@ -59,16 +57,15 @@ const ProductsSection = ({ products }) => (
 const Product = ({ product }) => {
   const { addItem } = useCart();
   return (
-    <div className="relative block border border-slate-200 py-2">
-      <button
-        className="absolute p-2 text-white bg-slate-900 rounded-full right-4 top-4"
-        type="button"
-      >
-        <BsBookmarkStarFill />
-      </button>
+    <motion.div 
+    transition={{ duration: .5 }}
+    initial={{ opacity: 0, scale: 0.9 }}
+    whileInView={{ opacity: 1, scale: 1}}
+    className="relative rellax block border border-slate-200 pb-2">
+     
       <img
         className="object-contain w-full h-56 lg:h-72"
-        src={product.image}
+        src={product.images[1]}
         alt={product.title}
         loading="lazy"
       />
@@ -89,6 +86,6 @@ const Product = ({ product }) => {
           Add to Cart
         </button>
       </div>
-    </div>
+    </motion.div>
   );
 };

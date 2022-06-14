@@ -24,7 +24,7 @@ const Navbar = () => {
     },
   ];
   return (
-    <nav className="bg-yellow-300 fixed top-0 w-full z-20">
+    <nav className="bg-yellow-300 shadow-md fixed top-0 w-full z-20">
       <div className="px-4 lg:px-0 py-4 max-w-[950px] mx-auto flex w-full items-center text-white justify-between">
       <Link
         to={"/"}
