@@ -1,7 +1,7 @@
 import React from "react";
 import Navbar from "./components/Navbar";
 import { Routes, Route, Navigate } from "react-router-dom";
-import { Store, Settings, Cart } from "./pages";
+import { Store, Settings, Cart, Checkout } from "./pages";
 
 const App = () => {
   return (
@@ -14,6 +14,7 @@ const App = () => {
             <Route path="/store" element={<Store />} />
             <Route path="/cart" element={<Cart />} />
             <Route path="/settings" element={<Settings />} />
+            <Route path="/checkout" element={<Checkout />} />
           </Routes>
         </main>
       </div>

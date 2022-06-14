@@ -10,9 +10,10 @@ const Store = () => {
   const [products, setProducts] = useState([]);
   useEffect(() => {
     var rellax = new Rellax('.relax')
-    fetch("https://fakestoreapi.com/products?limit=9")
+    fetch("https://fakestoreapi.com/products/category/electronics?limit=9")
       .then((res) => res.json())
-      .then((data) => setProducts(data));
+      .then((data) => setProducts(data))
+      .catch((err) => console.log(err));
   }, []); // Only fetch the store data when the component is mounted
   return (
     <div className="w-full">

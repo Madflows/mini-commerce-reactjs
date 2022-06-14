@@ -8,6 +8,7 @@ const Cart = () => {
   const { totalItems } = useCart();
   return (
     <>
+      <h3 className="font-black text-center text-3xl mb-4">Your Cart</h3>
       <AllItems />
       <div>Total items in cart: {totalItems}</div>
     </>
@@ -15,7 +16,14 @@ const Cart = () => {
 };
 
 const AllItems = () => {
-  const { items, emptyCart, isEmpty, updateItemQuantity, removeItem } = useCart();
+  const { 
+    items, 
+    emptyCart, 
+    isEmpty, 
+    updateItemQuantity, 
+    removeItem,
+    cartTotal
+  } = useCart();
   console.log(items);
 
   if (isEmpty) {
@@ -32,15 +40,17 @@ const AllItems = () => {
         {items.map((item) => (
           <div
             key={item.id}
-            className="flex items-center justify-between px-4 py-4 bg-slate-200 rounded-sm"
+            className="flex flex-col md:flex-row items-center justify-between px-4 py-4 bg-slate-200 rounded-sm"
           >
-            <div className="flex justify-center gap-2 items-center">
-              <img src={item.image} className="w-8 h-8" />
+            <div className="flex justify-center gap-3 items-center">
+              <img src={item.image} className="w-10 h-10" />
               <p className="text-md font-bold">{item.title}</p>
             </div>
             <div className="flex items-center justify-center gap-6">
-              <p className="text-sm font-bold">${item.price}</p>
-              <div className="flex gap-1 items-center justify-center">
+              <p className="text-sm base:flex-1 md:flex-0 font-bold">
+                ${item.price * item.quantity}
+              </p>
+              <div className="flex base:flex-1 md:flex-0 gap-1 items-center justify-center">
                 <button
                   onClick={() => updateItemQuantity(item.id, item.quantity - 1)}
                   className="text-sm bg-slate-400 px-1"
@@ -58,13 +68,17 @@ const AllItems = () => {
 
               <button
                 onClick={() => removeItem(item.id)}
-                className="bg-slate-800 text-white rounded-full w-15 h-15 p-3 hover:bg-red-400 hover:text-slate-900 transition"
+                className="bg-slate-800 base:flex-1 md:flex-0 text-white rounded-full w-15 h-15 p-3 hover:bg-red-400 hover:text-slate-900 transition"
               >
                 <FaRegTrashAlt className="text-md" />
               </button>
             </div>
           </div>
         ))}
+        <div className="flex w-full px-2 py-4 bg-slate-200 items-center justify-center gap-2">
+          <p className="text-sm font-bold">Total:</p>
+          <h3 className="text-2xl font-black">${cartTotal.toFixed(2)}</h3>
+        </div>
       </div>
       <div className="flex flex-col mt-[2rem] gap-3">
         <Link
