@@ -21,6 +21,7 @@ Well, Here I am, working on the project
 - react-router-dom
 - react-icons
 - gh-pages
+- framer-motion
 
 ### Deployment Status
 [![Netlify Status](https://api.netlify.com/api/v1/badges/ddf4fdf8-4b98-4ae8-8199-73a906184fac/deploy-status)](https://app.netlify.com/sites/bejewelled-brioche-1c842e/deploys)
